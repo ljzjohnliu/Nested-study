@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fei.nestscrolldemo.MyNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nsv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    tools:context="com.fei.nestscrolldemo.Main2Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+        <!--  android:text="等下我要划上去\n 假装是个banner" -->
+        <TextView
+            android:id="@+id/top_1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#00000000"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+             />
+
+        <TextView
+            android:id="@+id/top_2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="我会划到顶部，固定住\n 假装是个横向类型栏目"
+            android:textColor="@android:color/white" />
+
+
+<!--        <android.support.v4.widget.SwipeRefreshLayout-->
+<!--            android:id="@+id/swip"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="500dp">-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="500dp" />
+
+<!--        </android.support.v4.widget.SwipeRefreshLayout>-->
+    </LinearLayout>
+
+
+</com.fei.nestscrolldemo.MyNestedScrollView>
